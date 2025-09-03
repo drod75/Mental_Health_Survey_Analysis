@@ -1,0 +1,31 @@
+# Name of the workflow.
+name: Ruff Linter and Formatter
+
+# This workflow will run on 'push' events to any branch
+# or on 'pull_request' events targeting any branch.
+on:
+  push:
+    branches:
+      - '**' # Triggers on push to any branch
+  pull_request:
+    branches:
+      - '**' # Triggers on pull request to any branch
+      
+# Defines the jobs in this workflow.
+jobs:
+  # Job: Ruff Linter & Formatter
+  ruff:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Run Ruff linter
+      uses: astral-sh/ruff-action@v3
+      with:
+        args: "check --output-format=github"
+        
+    - name: Run Ruff formatter check
+      uses: astral-sh/ruff-action@v3
+      with:
+        args: "format --check"
