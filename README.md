@@ -81,10 +81,6 @@ Contributions are what make the open source community such an amazing place to l
 
 ## License
 
-README
-
-    MIT license
-
 MIT License
 
 Copyright (c) 2025 David Rodriguez
