@@ -9,6 +9,7 @@ dependencies = [
     "pandas>=2.3.2",
     "plotly>=6.3.0",
     "python-dotenv>=1.1.1",
+    "rich>=14.1.0",
     "seaborn>=0.13.2",
     "streamlit>=1.49.1",
     "supabase>=2.18.1",

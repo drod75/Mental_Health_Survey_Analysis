@@ -2,9 +2,13 @@ import os
 from supabase import create_client, Client
 from dotenv import load_dotenv
 import logging
+from rich.console import Console
 
+logging.basicConfig(
+    level=logging.INFO, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+)
 logger = logging.getLogger(__name__)
-logger.setLevel(logging.INFO)
+logger.info("Supabase process starting!")
 
 
 class SupabaseScript:
@@ -46,8 +50,9 @@ class SupabaseScript:
         except Exception as e:
             logger.error(f"An error occurred: {e}")
 
-    def inset_data(self, table_name: str, data: dict) -> bool:
-        """_summary_
+    def insert_data(self, table_name: str, data: dict) -> bool:
+        """
+        Takes in a table name and inserts the data which is a dictionary, into the table that is in supabase.
 
         Args:
             table_name (str): _description_
@@ -71,3 +76,24 @@ class SupabaseScript:
             return False
 
         return True
+
+
+def testing(script: SupabaseScript) -> bool:
+    try:
+        data = script.fetch_data(table_name="survey_data")
+        console = Console()
+        console.print(data)
+
+    except Exception as E:
+        logger.error(f"Error trying to run tests, {str(E)}")
+        return False
+
+    return True
+
+
+if __name__ == "__main__":
+    scripter = SupabaseScript()
+    if not testing(scripter):
+        logger.error("Error trying to run supabase process")
+
+    logger.info("Supabase process was successful!")
