@@ -33,11 +33,13 @@ The goal of this project is to show how real-time data can be used get up to dat
 
 ## Techincal Details
 
-tbd
+The docstrings for the functions and classes in this repository were documentated based on the style used in **NumPy**.
 
 ### App Structure
-
-tbd image
+<div align="center">
+  <img src="./public/diagram.png" alt='flowchart' width=800>
+</div> <br>
+<p align="right"><a href="#readme-top">Back to top</a></p>
 
 ### Built With
 
@@ -64,20 +66,33 @@ tbd image
 ### Usage
 
 [Examples of how to use the project.]
+<p align="right"><a href="#readme-top">Back to top</a></p>
 
 ## Demo
 
 tbd
 
 ## Contributing
+We like open-source and want to develop practical applications for real-world problems. However, individual strength is limited. So, any kinds of contribution is welcome, such as:
+- New features
+- Bug fixes
+- Typo fixes
+- Suggestions
+- Maintenance
+- Documents
+- etc.
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+#### Heres how you can contribute:
+1. Fork the repository
+2. Create a new feature branch
+3. Commit your changes 
+4. Push to the branch 
+5. Submit a pull request
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature')
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+
+<p align="right"><a href="#readme-top">Back to top</a></p>
+
+
 
 ## License
 
