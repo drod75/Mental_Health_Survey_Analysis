@@ -13,7 +13,6 @@ supabase = get_supabase_client()
 st.title("Student Survey Form:")
 
 with st.form("Student Survey"):
-
     st.markdown("## Personal Information:")
 
     with st.expander("Click to expand/collapse Personal Information section"):
@@ -126,7 +125,7 @@ with st.form("Student Survey"):
                     - **Degree Type:** {degree}
                     - **Year of Study:** {year}
                     - **Major:** {major}
-                    - **Minor:** {minor if minor else 'N/A'}
+                    - **Minor:** {minor if minor else "N/A"}
                     - **GPA:** {gpa}
                     - **Extracurricular Activities:** {extracurricular}
                     
